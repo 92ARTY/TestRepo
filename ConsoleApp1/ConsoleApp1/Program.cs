@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
@@ -10,7 +6,13 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            new SomeClass().OneMethod1(2,3);
+            var someclass = new SomeClass();
+            someclass.OneMethod1(2,3,new object[]{"DSf",344,3434L});
+            var result=someclass.GetSomeNumbers();
+            foreach (var res in result)
+            {
+                Console.WriteLine(res);
+            }
             Console.ReadLine();
         }
     }
